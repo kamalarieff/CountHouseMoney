@@ -30,3 +30,4 @@ void checkPay ( Person housemate, float total, float perPerson){
 			cout << "Name: " << housemate.name << "\tMust pay: " << calculate(housemate,total,perPerson) << endl;
 	}
 }
+
