@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_param_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:id="@+id/ll_text_wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_prefix"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="0px"
+                android:background="@drawable/edit_text_prefix_insertad"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:padding="5dp"
+                android:text="prefix" />
+
+            <EditText
+                android:id="@+id/et_field"
+                style="@style/InsertAd.EditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:inputType="textNoSuggestions"
+                android:textColorHint="@color/placeholder_grey"></EditText>
+
+            <TextView
+                android:id="@+id/tv_suffix"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="0px"
+                android:background="@drawable/edit_text_suffix_insertad"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:padding="5dp"
+                android:text="suffix" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_info"
+            style="@style/InsertAd.ParamInfo"
+            android:layout_below="@id/ll_text_wrapper"
+            android:layout_marginTop="5dp"
+            android:visibility="visible">
+
+            <ImageView style="@style/InsertAd.IconTips" />
+
+            <TextView
+                android:id="@+id/tv_info_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="italic"
+                tools:text="@string/placeholder"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_error"
+            style="@style/InsertAd.ParamError"
+            android:layout_below="@id/ll_text_wrapper"
+            android:layout_marginTop="5dp"
+            android:visibility="gone">
+
+            <ImageView style="@style/InsertAd.IconError" />
+
+            <TextView
+                android:id="@+id/tv_error_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="italic"
+                tools:text="@string/placeholder"
+               />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

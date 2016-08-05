@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar" />
+
+    <fragment
+        android:id="@+id/f_actionbar"
+        android:name="com.mudah.my.fragments.InitializationFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_report_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ad_view_button"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_report_title"
+            style="@style/EmailReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/mail_report_title" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_report_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_report_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/mail_report_info" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <TextView
+                style="@style/EmailAdvertiser.Label"
+                android:text="@string/mail_name" />
+
+            <EditText
+                android:id="@+id/et_report_name"
+                style="@style/InsertAd.EditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:singleLine="true" />
+
+            <TextView
+                style="@style/EmailAdvertiser.Label"
+                android:text="@string/mail_email" />
+
+            <EditText
+                android:id="@+id/et_report_email"
+                style="@style/InsertAd.EditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
+
+            <TextView
+                style="@style/EmailAdvertiser.Label"
+                android:text="@string/mail_phone_number" />
+
+            <EditText
+                android:id="@+id/et_report_phone"
+                style="@style/InsertAd.EditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="13"
+                android:singleLine="true" />
+
+            <TextView
+                style="@style/EmailAdvertiser.Label"
+                android:text="@string/mail_report_message" />
+
+            <EditText
+                android:id="@+id/et_report_message"
+                style="@style/InsertAd.EditText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:lines="4"
+                android:scrollbars="vertical" />
+
+
+            <Button
+                android:id="@+id/b_report_send"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/emailadvertiser_send_btn"
+                android:text="@string/mail_advertiser_send"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

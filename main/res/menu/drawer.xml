@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/group1">
+
+        <item
+            android:id="@+id/ll_menu_insertad"
+            android:checked="false"
+            android:icon="@drawable/ic_camera_red"
+            android:title="@string/menu_item_insertad" />
+
+        <item
+            android:id="@+id/ll_menu_find"
+            android:checked="false"
+            android:icon="@drawable/ic_find_blue"
+            android:title="@string/menu_item_find" />
+    </group>
+
+    <group android:id="@+id/group2">
+
+        <item
+            android:id="@+id/ll_menu_chat"
+            android:checked="false"
+            android:icon="@drawable/ic_chat_green"
+            android:title="@string/menu_item_chat"
+            app:actionLayout="@layout/menu_counter" />
+
+        <item
+            android:id="@+id/ll_menu_favorite"
+            android:checked="false"
+            android:icon="@drawable/menu_icon_favorite"
+            android:title="@string/menu_item_favorite"
+            app:actionLayout="@layout/menu_counter" />
+
+        <item
+            android:id="@+id/ll_menu_bookmark"
+            android:checked="false"
+            android:icon="@drawable/menu_icon_bookmark"
+            android:title="@string/menu_item_bookmark"
+            app:actionLayout="@layout/menu_counter" />
+
+    </group>
+
+    <group android:id="@+id/group3">
+
+        <item
+            android:id="@+id/ll_menu_privacy"
+            android:checked="false"
+            android:icon="@drawable/menu_icon_privacy"
+            android:title="@string/menu_item_privacy" />
+
+        <item
+            android:id="@+id/ll_menu_support"
+            android:checked="false"
+            android:icon="@drawable/menu_icon_support"
+            android:title="@string/menu_item_support" />
+
+        <item
+            android:id="@+id/ll_menu_terms"
+            android:checked="false"
+            android:icon="@drawable/menu_icon_terms"
+            android:title="@string/menu_item_terms" />
+
+        <item
+            android:id="@+id/ll_menu_safely"
+            android:checked="false"
+            android:icon="@drawable/menu_icon_shopsafely"
+            android:title="@string/menu_item_safely" />
+        <item
+            android:id="@+id/ll_menu_betauser"
+            android:checked="false"
+            android:icon="@drawable/menu_icon_betauser"
+            android:title="@string/menu_item_betauser" />
+
+        <item
+            android:id="@+id/ll_menu_logout"
+            android:checked="false"
+            android:icon="@drawable/ic_power"
+            android:title="@string/menu_item_logout"
+            android:visible="false" />
+    </group>
+
+</menu>

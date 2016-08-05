@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/rl_outside"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="@color/semi_transparent">
+
+<LinearLayout
+    android:id="@+id/rl_case"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="25dp"
+    android:background="@color/dialogbox_grey">
+
+        <WebView
+            android:id="@+id/wv_messages"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:scrollbarStyle="outsideInset"
+            tools:text="@string/placeholder" />
+
+</LinearLayout>
+
+<Button
+    android:id="@+id/btn_close"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:layout_alignRight="@+id/rl_case"
+    android:layout_alignTop="@+id/rl_case"
+    android:layout_marginRight="-10dp"
+    android:layout_marginTop="-10dp"
+    android:background="@drawable/button_grey_close_round"
+    android:text="  X  " />
+
+</RelativeLayout>

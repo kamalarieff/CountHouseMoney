@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@color/edittext_grey_background"
+        android:gravity="center"
+        android:minHeight="200dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/b_prev"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_blue"
+            android:text="@string/back"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/b_submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_green"
+            android:text="@string/send"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

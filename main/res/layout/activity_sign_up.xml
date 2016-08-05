@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:isScrollContainer="true"
+        android:overScrollMode="always"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/intro_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@string/roboto_regular"
+                android:text="@string/intro_text"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/info_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_below="@id/intro_txt"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_info_outline" />
+
+            <TextView
+                android:id="@+id/proniaga_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/intro_txt"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/info_icon"
+                android:fontFamily="@string/roboto_regular"
+                android:text="@string/proniaga_notification"
+                android:textColor="@color/proniaga_info"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/email_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_below="@id/info_icon"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_email" />
+
+            <AutoCompleteTextView
+                android:id="@+id/email"
+                style="@style/SignForm.EditText"
+                android:layout_below="@id/proniaga_info"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/email_icon"
+                android:fontFamily="@string/roboto_regular"
+                android:hint="@string/email_address"
+                android:inputType="textEmailAddress" />
+
+            <ImageView
+                android:id="@+id/passw_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_below="@id/email_icon"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_password" />
+
+            <com.lib701.widgets.CustomEditTextState
+                android:id="@+id/password"
+                style="@style/SignForm.EditText"
+                android:layout_below="@id/email"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/email_icon"
+                android:fontFamily="@string/roboto_regular"
+                android:hint="@string/password"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/placeholder"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_below="@id/passw_icon"
+                android:layout_marginTop="30dp" />
+
+            <com.lib701.widgets.CustomEditTextState
+                android:id="@+id/confirm_password"
+                style="@style/SignForm.EditText"
+                android:layout_below="@id/password"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/placeholder"
+                android:fontFamily="@string/roboto_regular"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword" />
+
+            <CheckBox
+                android:id="@+id/agree_tc"
+                style="@style/Checkbox"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_below="@id/placeholder"
+                android:layout_marginTop="30dp"
+                android:gravity="top" />
+
+            <TextView
+                android:id="@+id/agree_tc_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/confirm_password"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/agree_tc"
+                android:fontFamily="@string/roboto_regular"
+                android:text="@string/agree_tc_msg"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/agree_tc_msg"
+                android:layout_marginTop="30dp"
+                android:background="@color/blue_text"
+                android:gravity="center"
+                android:text="@string/sign_up_title"
+                android:textAlignment="gravity"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                style="@style/SignForm.ItemContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/submit"
+                android:layout_gravity="center_horizontal|center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:text="@string/sign_in_here"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_sign_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_in_now"
+                    android:textColor="@color/link_text_color"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pb_loading"
+                style="?android:attr/progressBarStyleLargeInverse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+     A theme that has a translucent background.  Here we explicitly specify
+     that this theme is to inherit from the system's translucent theme,
+     which sets up various attributes correctly.
+-->
+    <style name="Theme.Translucent" parent="android:style/Theme.Translucent">
+        <item name="android:windowBackground">@color/translucent_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorForeground">#fff</item>
+    </style>
+
+    <style name="Title" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:background">@drawable/bg_gradient</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Title.Bold">
+        <item name="android:padding">10dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/filter_background_grey</item>
+        <item name="android:textColor">@color/filter_dark_grey</item>
+    </style>
+
+    <style name="Title.Narrow">
+        <item name="android:background">@color/grid_grey</item>
+        <item name="android:textColor">@color/menu_item_label</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="FirstTitle" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SecondTitle" parent="@android:style/TextAppearance">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="TranslucentFadeDialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/PauseDialogAnimation</item>
+    </style>
+
+    <style name="PauseDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="InsertAd"></style>
+
+    <style name="InsertAd.SegmentHeader">
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="InsertAd.SegmentDivider">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_marginTop">10px</item>
+        <item name="android:layout_marginBottom">10px</item>
+        <item name="android:layout_height">3px</item>
+        <item name="android:background">@color/insertad_segement_divider</item>
+    </style>
+
+    <style name="InsertAd.EditText">
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/edit_text_insertad</item>
+    </style>
+
+    <style name="InsertAd.Dropdown">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:background">@drawable/btn_dropdown_mudah</item>
+    </style>
+
+    <style name="InsertAd.ParamInfo">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/insertad_blue_info</item>
+    </style>
+
+    <style name="InsertAd.ParamError">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/insertad_red_error</item>
+    </style>
+
+    <style name="InsertAd.ParamWarning">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/insertad_yellow_warning</item>
+    </style>
+
+    <style name="InsertAd.IconTips">
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:background">@drawable/icon_tips</item>
+    </style>
+
+    <style name="InsertAd.IconError">
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:background">@drawable/icon_error</item>
+    </style>
+
+    <style name="InsertAd.IconWarning">
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_width">20dp</item>
+        <item name="android:background">@drawable/icon_warning</item>
+    </style>
+
+    <style name="ImageGallery">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="Adview"></style>
+
+    <style name="Adview.TitleText">
+        <item name="android:textSize">17dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Adview.SubTitleText">
+        <item name="android:textSize">11dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="Adview.SubTitleIcon">
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:paddingTop">2dp</item>
+    </style>
+
+    <style name="Adview.VerifiedIcon">
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+    </style>
+
+    <style name="Adview.VerifiedText">
+        <item name="android:textSize">11dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/text_light_grey</item>
+    </style>
+
+    <style name="BottomActionbar"></style>
+
+    <style name="BottomActionbar.ArrowMenu">
+        <item name="android:layout_width">35dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/button_white_bg_border</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+
+    <style name="BottomActionbar.ButtonSeparator">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@color/adview_actionbar_separator</item>
+    </style>
+
+    <style name="BottomActionbar.Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">4dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.Small</item>
+        <item name="android:textColor">@drawable/button_adreply_text_color</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BottomActionbar.ButtonHolder">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/yellow_menu</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="EmailAdvertiser"></style>
+
+    <style name="EmailAdvertiser.Label">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:paddingLeft">5dp</item>
+    </style>
+
+    <style name="EmailReport">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@color/filter_background_grey</item>
+        <item name="android:textColor">@color/filter_dark_grey</item>
+    </style>
+
+    <style name="Menu"></style>
+
+    <style name="Menu.ItemContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">12dp</item>
+    </style>
+
+    <style name="Menu.ItemContainerUser">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">172dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="Menu.ItemIcon">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+    </style>
+
+    <style name="Menu.ItemIconBig">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="Menu.ItemIconBigProfile">
+        <item name="android:layout_width">64dp</item>
+        <item name="android:layout_height">64dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginTop">25dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="Menu.ItemLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/menu_item_label</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="Menu.ItemLabelUser">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
+
+    <style name="Menu.ItemLabelUserProfile">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
+
+    <style name="Menu.ItemLabelUserProfileBig">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Menu.ItemCount">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:background">@drawable/menu_item_count_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="Menu.ItemSeparator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_marginTop">9dp</item>
+        <item name="android:layout_marginBottom">9dp</item>
+        <item name="android:layout_marginLeft">52dp</item>
+        <item name="android:background">@color/menu_item_separator</item>
+    </style>
+
+    <style name="Menu.MenuFragment">
+        <item name="android:layout_width">304dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">start</item>
+    </style>
+
+    <style name="adsGridView"></style>
+
+    <style name="adsGridView.subject">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/filter_dark_grey</item>
+    </style>
+
+    <style name="adsGridView.price">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/ad_price_list</item>
+    </style>
+
+    <style name="adsGridView.posted">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/list_light_grey</item>
+    </style>
+
+    <style name="FilterMenu"></style>
+
+    <style name="FilterMenu.Dropdown">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">@color/white</item>
+
+    </style>
+
+    <style name="FilterMenu.DropdownArrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">18dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:src">@drawable/ic_arrow_dropdown</item>
+    </style>
+
+    <style name="FilterMenu.ItemSeparator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:background">@color/filter_menu_item_separator</item>
+    </style>
+
+    <style name="FilterMenu.IconStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="FilterMenu.BottomIconStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+
+    <style name="FilterMenu.TxtBtmTitle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="FilterMenu.TxtContainer">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="FilterMenu.spinner">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:spinnerMode" tools:targetApi="11">dialog</item>
+    </style>
+
+    <style name="FilterMenu.TxtField">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="FilterActivity"></style>
+
+    <style name="FilterActivity.Title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/param_filter_title</item>
+    </style>
+
+    <style name="FilterActivity.Text">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/param_filter_text</item>
+    </style>
+
+    <style name="FilterActivity.DropdownCue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:src">@drawable/ic_arrow_dropdown</item>
+    </style>
+
+    <style name="LocationActivity"></style>
+
+    <style name="LocationActivity.Title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/param_filter_title</item>
+    </style>
+
+    <style name="LocationActivity.Text">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/param_filter_text</item>
+    </style>
+
+    <style name="LocationActivity.DropdownCue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:src">@drawable/ic_arrow_dropdown</item>
+    </style>
+
+    <style name="LocationActivity.ItemSeparator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:background">@color/filter_menu_item_separator</item>
+    </style>
+
+    <style name="list_ads_item_thumbnail">
+        <!-- <item name="android:background">@android:drawable/picture_frame</item> -->
+        <item name="android:cropToPadding">true</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="list_divider">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/list_divider</item>
+    </style>
+
+    <style name="TextAppearance.Small.Shadow">
+        <item name="android:textColor">#44000000</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:shadowDx">2</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:textSize">25dp</item>
+    </style>
+
+    <style name="CheckboxLeftPadding">
+        <item name="android:paddingLeft">42dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">14dp</item>
+    </style>
+
+    <style name="grid_ads_item_pic_number" parent="common_text_small">
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/ic_grid_camera</item>
+    </style>
+
+    <style name="common_text_small" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/scm_text_tiny</item>
+    </style>
+
+    <style name="BottomButton">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:background">@color/list_refresh_blue</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17dp</item>
+    </style>
+
+    <style name="BottomButtonNoBg">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@color/list_refresh_blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
+        <item name="sv_backgroundColor">#a0212121</item>
+        <item name="sv_showcaseColor">@color/button_background</item>
+        <item name="sv_buttonText">OK</item>
+        <item name="sv_tintButtonColor">true</item>
+    </style>
+
+    <style name="ShareButtonAdview">
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Toolbar.SubTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="FloatingBar">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentStart" tools:targetApi="17">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/actionbar_filter_text</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="FloatingBar.TitleText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="FloatingBar.SubTitleText">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="PriceFilter_EditText">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/edit_text_pricerange</item>
+    </style>
+
+    <style name="HeadLine">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_dark_grey</item>
+    </style>
+
+    <style name="SubHeadLine">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_dark_grey</item>
+    </style>
+
+    <style name="RadioButton" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/selector_radio_button</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+    </style>
+
+    <style name="Checkbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/insert_ad_checkbox</item>
+        <item name="android:layout_marginLeft">4dp</item>
+    </style>
+
+    <style name="MudahDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:background">@color/draft_background</item>
+        <item name="android:windowTitleStyle">@style/MudahDialogTitleStyle</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorPrimary">@color/draft_text_grey</item>
+        <item name="android:buttonBarStyle">@style/MudahButtonBar</item>
+        <item name="android:buttonBarButtonStyle">@style/MudahBorderlessButton</item>
+        <item name="android:dividerHorizontal">@null</item>
+        <item name="android:dividerVertical">@null</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="colorAccent">@color/draft_button_light_blue</item>
+    </style>
+
+    <style name="MudahDialogTitleStyle">
+        <item name="android:textColor">@color/draft_title_red</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MudahBorderlessButton">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/draft_button_light_blue</item>
+    </style>
+
+    <style name="MudahButtonBar" parent="@android:style/Holo.ButtonBar.AlertDialog">
+        <item name="android:showDividers">none</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textColor">@color/draft_button_light_blue</item>
+    </style>
+
+    <style name="SignForm"></style>
+
+    <style name="SignForm.EditText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:background">@drawable/edit_text_sign_form</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/sign_form_hint</item>
+        <item name="android:textColor">@color/signup_focus</item>
+    </style>
+
+    <style name="SignForm.ItemContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SignForm.TextMsg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="SignForm.Header">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="SignForm.TextContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="BottomActionbar.inbox_badge">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:paddingTop">10dp</item>
+    </style>
+
+    <style name="inbox_list_badge">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:paddingTop">10dp</item>
+    </style>
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/menu_item_label</item>
+    </style>
+
+    <style name="UserProfile"></style>
+
+    <style name="UserProfile.ItemContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="UserProfile.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:background">@drawable/edit_text_user_profile</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/sign_form_hint</item>
+        <item name="android:textColor">@color/signup_focus</item>
+    </style>
+
+    <style name="UserProfile.Dropdown">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:textSize">16sp</item>
+
+    </style>
+
+    <style name="UserProfile.Edit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="spinnerDropDownItemStyle">
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+</resources>

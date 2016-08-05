@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sv_profile_form"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_profile_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="@string/insert_ad_name" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_param_wrapper_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white">
+
+                <EditText
+                    android:id="@+id/et_name"
+                    style="@style/InsertAd.EditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:hint="@string/insert_ad_name"
+                    android:inputType="textPersonName"
+                    android:maxLength="50"></EditText>
+
+                <LinearLayout
+                    android:id="@+id/ll_item_info_name"
+                    style="@style/InsertAd.ParamInfo"
+                    android:layout_below="@id/et_name"
+                    android:visibility="gone">
+
+                    <ImageView style="@style/InsertAd.IconTips" />
+
+                    <TextView
+                        android:id="@+id/tv_info_msg_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_item_error_name"
+                    style="@style/InsertAd.ParamError"
+                    android:layout_below="@id/et_name"
+                    android:visibility="gone">
+
+                    <ImageView style="@style/InsertAd.IconError" />
+
+                    <TextView
+                        android:id="@+id/tv_error_msg_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="italic"
+                        tools:text="@string/placeholder" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_adtype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/insert_ad_post_as" />
+
+                <RadioGroup
+                    android:id="@+id/rg_post_as"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_private"
+                        style="@style/RadioButton" />
+
+                    <RadioButton
+                        android:id="@+id/rb_professional"
+                        style="@style/RadioButton" />
+
+                    <RadioButton
+                        android:id="@+id/rb_company"
+                        style="@style/RadioButton" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/profile_email" />
+
+            <RelativeLayout
+                android:id="@+id/rl_param_wrapper_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/et_email"
+                    style="@style/InsertAd.EditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:hint="@string/profile_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="60" />
+
+                <LinearLayout
+                    android:id="@+id/ll_item_info_email"
+                    style="@style/InsertAd.ParamInfo"
+                    android:layout_below="@id/et_email"
+                    android:visibility="visible">
+
+                    <ImageView style="@style/InsertAd.IconTips" />
+
+                    <TextView
+                        android:id="@+id/tv_info_msg_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/profile_email_info"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_item_error_email"
+                    style="@style/InsertAd.ParamError"
+                    android:layout_below="@id/et_email"
+                    android:visibility="gone">
+
+                    <ImageView style="@style/InsertAd.IconError" />
+
+                    <TextView
+                        android:id="@+id/tv_error_msg_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="italic"
+                        tools:text="@string/placeholder" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_profile_params_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/profile_phone" />
+
+            <RelativeLayout
+                android:id="@+id/rl_param_wrapper_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    style="@style/InsertAd.EditText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:hint="@string/profile_phone"
+                    android:inputType="number"
+                    android:maxLength="13" />
+
+                <LinearLayout
+                    android:id="@+id/ll_item_info_phone"
+                    style="@style/InsertAd.ParamInfo"
+                    android:layout_below="@id/et_phone"
+                    android:visibility="visible">
+
+                    <ImageView style="@style/InsertAd.IconTips" />
+
+                    <TextView
+                        android:id="@+id/tv_info_msg_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/profile_phone_info"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="italic" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_item_error_phone"
+                    style="@style/InsertAd.ParamError"
+                    android:layout_below="@id/et_phone"
+                    android:visibility="gone">
+
+                    <ImageView style="@style/InsertAd.IconError" />
+
+                    <TextView
+                        android:id="@+id/tv_error_msg_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textStyle="italic"
+                        tools:text="@string/placeholder" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <CheckBox
+                android:id="@+id/cb_whats_app"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/insert_ad_phone_whats_app"
+                style="@style/Checkbox" />
+
+            <CheckBox
+                android:id="@+id/cb_phone_hide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/insert_ad_phone_hide"
+                style="@style/Checkbox" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/edittext_grey_background"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/b_prev"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_blue"
+                android:text="@string/back"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/b_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_green"
+                android:text="@string/preview"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

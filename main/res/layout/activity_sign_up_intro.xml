@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.mudah.my.activities.SignUpIntroActivity">
+
+        <TextView
+            android:id="@+id/intro_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/intro_title"
+            android:textColor="@color/action_bar_red"
+            android:textSize="26sp" />
+
+        <ImageView
+            android:id="@+id/intro_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/intro_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:src="@drawable/graphic_intro_ua" />
+
+        <TextView
+            android:id="@+id/intro_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:gravity="center"
+            android:text="@string/intro_desc"
+            android:textColor="@color/signup_focus"
+            android:layout_below="@id/intro_img"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/intro_desc"
+            android:layout_marginTop="2dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/middle_bar"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_below="@id/intro_desc"
+            android:layout_centerHorizontal="true"/>
+
+        <Button
+            android:id="@+id/btn_no_thx"
+            android:layout_width="152dp"
+            android:layout_height="44dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_below="@id/intro_desc"
+            android:layout_toLeftOf="@id/middle_bar"
+            android:layout_toStartOf="@id/middle_bar"
+            android:background="@drawable/rounded_corner_grey"
+            android:gravity="center"
+            android:text="@string/intro_no_thx"
+            android:textColor="@color/text_dark_blue"
+            android:textSize="16sp"
+            android:layout_marginTop="45dp"/>
+
+        <Button
+            android:id="@+id/btn_sign_now"
+            android:layout_width="152dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_below="@id/intro_desc"
+            android:layout_toEndOf="@id/middle_bar"
+            android:layout_toRightOf="@id/middle_bar"
+            android:background="@drawable/rounded_corner_blue"
+            android:gravity="center"
+            android:text="@string/intro_sign_now"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="45dp"/>
+
+        <LinearLayout android:id="@+id/ll_sign_in"
+            style="@style/SignForm.ItemContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_below="@id/btn_no_thx"
+            android:paddingTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:textColor="@color/signup_focus"
+                android:text="@string/sign_in_here"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_sign_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in_now"
+                android:textColor="@color/link_text_color"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+
+        <ImageView android:id="@+id/intro_note"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:layout_marginEnd="25dp"
+            android:src="@drawable/ic_info_outline"
+            android:paddingBottom="12dp"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:id="@+id/proniaga_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/roboto_regular"
+            android:text="@string/intro_proniaga_notification"
+            android:textColor="@color/proniaga_info"
+            android:textSize="12sp"
+            android:layout_toEndOf="@id/intro_note"
+            android:layout_toRightOf="@id/intro_note"
+            android:layout_below="@id/ll_sign_in"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="20dp"/>
+
+    </RelativeLayout>
+</ScrollView>

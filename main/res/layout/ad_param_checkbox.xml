@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_param_wrapper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <!--
+            Separate text from checkbox due to padding issue when google changes the
+            logic for jellybean
+         -->
+        <LinearLayout
+            android:id="@+id/ll_checkbox_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                style="@style/Checkbox"/>
+
+            <TextView
+                android:id="@+id/tv_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                style="@style/FilterActivity.Title"
+                android:text="CheckBox" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_info"
+            style="@style/InsertAd.ParamInfo"
+            android:layout_below="@id/ll_checkbox_container"
+            android:visibility="visible">
+
+            <ImageView style="@style/InsertAd.IconTips" />
+
+            <TextView
+                android:id="@+id/tv_info_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="italic"
+                tools:text="@string/placeholder" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_error"
+            style="@style/InsertAd.ParamError"
+            android:layout_below="@id/ll_checkbox_container"
+            android:visibility="gone">
+
+            <ImageView style="@style/InsertAd.IconError" />
+
+            <TextView
+                android:id="@+id/tv_error_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="italic"
+                tools:text="@string/placeholder" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

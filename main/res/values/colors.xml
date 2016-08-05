@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="yellow_menu">#FFDA00</color>
+    <color name="yellow_start">#FEF683</color>
+    <color name="yellow_end">#FBE67E</color>
+    <color name="green_start">#32cd32</color>
+    <color name="green_end">#008000</color>
+    <color name="grey_start">#ffe3e8f1</color>
+    <color name="grey_end">#ffd5dd</color>
+    <color name="grey_divider">#b3b3b3</color>
+    <color name="light_brown">#ffffeb</color>
+
+    <color name="shadow_startcolor">#FFE3E3E3</color>
+    <color name="line_seperator">#EAEAEA</color>
+
+    <!-- menu -->
+    <color name="text_color">#3C3C3B</color>
+    <color name="box_color">#979696</color>
+    <color name="border_line_color">#6F6f6E</color>
+    <color name="search_menu_btm_text">#1698AF</color>
+
+    <color name="menu_item_count">#C82228</color>
+    <color name="menu_item_separator">#d0d2d3</color>
+    <color name="menu_item_label">#6d6e70</color>
+
+    <color name="menu_item_search">#1A98AC</color>
+    <color name="menu_item_insertad">#C82228</color>
+    <color name="menu_item_favorite">#FFD600</color>
+    <color name="menu_item_bookmark">#84AC3F</color>
+    <color name="menu_item_privacy">#C82228</color>
+    <color name="menu_item_support">#71C1CE</color>
+    <color name="menu_item_terms">#C4A800</color>
+    <color name="menu_item_betauser">#25552C</color>
+    <color name="menu_item_safely">#0087bd</color>
+    <color name="menu_item_signup">#00B8FF</color>
+    <color name="menu_item_logout">#BE282D</color>
+
+    <color name="body">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey">#E6E6DD</color>
+    <color name="light_grey">#4E4E4E</color>
+    <color name="dark_grey">#434343</color>
+    <color name="yellow">#FFFCD5</color>
+    <color name="red">#C82121</color>
+    <color name="primary_red">#A60000</color>
+    <color name="red_flash">#CD2027</color>
+    <color name="placeholder_grey">#ff989898</color>
+    <color name="grid_grey">#E4E4E4</color>
+    <color name="grid_placeholder_bg_color">#fff4f4f4</color>
+    <color name="list_light_grey">#4E4F4E</color>
+    <color name="action_bar_red">#DD0000</color>
+
+    <color name="dialogbox_grey">#8f8d8d</color>
+    <color name="dialogbox_close_grey">#c9c7c7</color>
+    <color name="dialogbox_close_red">#EE1B24</color>
+
+    <color name="edittext_grey_border">#ccc</color>
+    <color name="edittext_grey_background">#E4E5E6</color>
+
+    <color name="info_blue">#14A5BE</color>
+
+    <color name="semi_transparent">#99434343</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="dark_shadow">#99c9c7c7</color>
+
+    <color name="list_selected_grey">#E3E3E3</color>
+    <color name="list_title_blue">#33B5E5</color>
+    <color name="list_refresh_blue">#1698AF</color>
+    <color name="list_divider">#797C7E</color>
+    <color name="ad_price_list">#C6181A</color>
+
+    <color name="scm_border">#ffbbbbbb</color>
+
+    <!-- Actionbar Filter -->
+    <color name="actionbar_filter_background">#F9F9F9</color>
+    <color name="actionbar_filter_text">#6D6E70</color>
+
+    <!-- Actionbar -->
+    <color name="actionbar_light_grey">#858585</color>
+    <color name="actionbar_focus">#EBEBEB</color>
+    <color name="actionbar_searchview_hint">#A6A8Ab</color>
+    <color name="actionbar_searchview_text">#6D6E70</color>
+    <color name="actionbar_title">#C82228</color>
+    <color name="actionbar_subtitle">#929497</color>
+
+    <!-- Adview -->
+    <color name="ad_view_title_text">#3C3C3B</color>
+    <color name="ad_view_seller_date_text">#4C4C4C</color>
+    <color name="adview_segment_grey">#6F6F6E</color>
+    <color name="ad_special_params">#3C3C3B</color>
+    <color name="ad_price">#BE282D</color>
+    <color name="ad_info">#4C4C4C</color>
+    <color name="adview_actionbar_separator">#D3AD70</color>
+
+    <!-- Insertad -->
+    <color name="insertad_blue_btn_pressed">#ff03535f</color>
+    <color name="insertad_blue_btn">#05798A</color>
+    <color name="insertad_green_btn_pressed">#ff0f5224</color>
+    <color name="insertad_green_btn">#177D36</color>
+    <color name="insertad_blue_info">#B7E1DD</color>
+    <color name="insertad_red_error">#F6D7CC</color>
+    <color name="insertad_yellow_warning">#faebcc</color>
+    <color name="insertad_segement_divider">#58595b</color>
+
+    <!-- Email advertiser -->
+    <color name="emailadvertiser_send_btn">#359344</color>
+
+    <!-- Search filter -->
+    <color name="filter_dark_grey">#404041</color>
+    <color name="filter_segment_grey">#999999</color>
+    <color name="filter_background_grey">#E0E0E0</color>
+    <color name="filter_search_only_grey">#6f6f6e</color>
+    <color name="filter_menu_item_separator">#D0D2D3</color>
+    <color name="filter_safe_search">#84ac3f</color>
+    <color name="filter_reset_search">#1a98ac</color>
+
+    <!-- Param Filter -->
+    <color name="param_filter_title">#6D6E70</color>
+    <color name="param_filter_text">#929497</color>
+
+    <!-- Chooser popup -->
+    <color name="chooser_title">#C82228</color>
+    <color name="chooser_item">#6d6e70</color>
+
+    <color name="translucent_background">#e0000000</color>
+    <color name="transparency_50">#7Fffffff</color>
+
+    <color name="scm_text">#ff898989</color>
+    <color name="selected_box_background">#FFF4D9DA</color>
+    <color name="selected_box_background_border">#FFBE2A2A</color>
+    <color name="selected_text">#FFBE2A2A</color>
+    <color name="button_background">#FF1698AF</color>
+    <color name="radio_blue">#00b7ff</color>
+    <color name="radio_info">#6d6e70</color>
+
+    <!-- Grid View -->
+    <color name="price_color">#BE2A2D</color>
+    <color name="date_color">#878786</color>
+
+    <color name="red_title_bg">#DD0000</color>
+    <color name="white_list_bg">#F9F9F9</color>
+    <color name="home_bg">#F7F7F7</color>
+    <!-- Home location -->
+    <color name="text_dark_grey">#58595b</color>
+    <color name="text_light_grey">#919396</color>
+    <color name="text_light_blue">#00b6ff</color>
+    <color name="text_dark_blue">#00a5e6</color>
+    <color name="grey_background">#E9E9E9</color>
+    <color name="light_grey_divider">#DDDDDD</color>
+
+    <color name="default_circle_indicator_fill_color">#DD0000</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+
+    <!-- Insert Draft Dialog Popup-->
+    <color name="draft_background">#f9f9f9</color>
+    <color name="draft_title_red">#dd0000</color>
+    <color name="draft_text_grey">#6d6e70</color>
+    <color name="draft_button_light_blue">#00a5e6</color>
+
+    <color name="grey_transparent_bg">#AFFF</color>
+    <color name="sign_form_hint">#bdbdbb</color>
+    <color name="signup_focus">#2e2e2e</color>
+    <color name="sign_form_focus_text">#00b8ff</color>
+    <color name="signup_error">#dd0000</color>
+    <color name="proniaga_info">#96ba00</color>
+    <!-- User Account Form -->
+    <color name="snackbar">#637a00</color>
+    <color name="link_text_color">#00b8ff</color>
+    <color name="error_text_color">#dd0000</color>
+
+    <!-- Chat -->
+    <color name="bottom_bg_grey">#fafafa</color>
+    <color name="bottom_bg_grey_on">#e5e5e5</color>
+    <color name="alert_color_bg">#F2AA0000</color>
+    <color name="nav_active_bg">#cdcdcd</color>
+    <color name="green_bg">#96ba00</color>
+    <color name="medium_grey">#7d8081</color>
+    <color name="chat_msg_box_bg">#fff9f9f9</color>
+    <color name="chat_inbox_bg">#fff9f9f9</color>
+    <color name="chat_msg_box_border">#ffcdcdcd</color>
+    <color name="hint_color">#adadad</color>
+
+    <color name="inbox_empty_color">#6d6d6d</color>
+    <color name="inbox_text_color">#434343</color>
+    <color name="inbox_message_color">#989897</color>
+    <color name="inbox_unread_time_color">#930000</color>
+
+    <color name="loading_bg">#50cdcdcd</color>
+    <color name="banner_header">#1a1a1a</color>
+    <color name="banner_header_bg">#CC1a1a1a</color>
+    <color name="banner_content">#00a5e6</color>
+</resources>

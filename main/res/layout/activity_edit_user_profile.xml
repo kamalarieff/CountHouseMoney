@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:isScrollContainer="true"
+        android:overScrollMode="always"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            style="@style/UserProfile.Edit"
+            android:paddingBottom="30dp">
+
+            <ImageView
+                style="@style/Menu.ItemIcon"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_password" />
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="56dp"
+                android:fontFamily="@string/roboto_regular"
+                android:hint="@string/your_password"
+                android:inputType="textPassword"
+                android:paddingBottom="10dp"
+                android:paddingTop="16dp" />
+
+            <Button
+                android:id="@+id/change_password"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:hint="@string/change"
+                android:padding="15dp" />
+
+            <ImageView
+                style="@style/Menu.ItemIcon"
+                android:layout_below="@id/password"
+                android:layout_marginTop="38dp"
+                android:src="@drawable/ic_person_line" />
+
+            <EditText
+                android:id="@+id/first_name"
+                style="@style/UserProfile.EditText"
+                android:layout_below="@id/password"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@string/roboto_regular"
+                android:hint="@string/first_name"
+                android:inputType="text"
+                android:maxLength="30" />
+
+            <ImageView
+                style="@style/Menu.ItemIcon"
+                android:layout_below="@id/first_name"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="35dp" />
+
+            <EditText
+                android:id="@+id/last_name"
+                style="@style/UserProfile.EditText"
+                android:layout_below="@id/first_name"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@string/roboto_regular"
+                android:hint="@string/last_name"
+                android:inputType="text"
+                android:maxLength="30" />
+
+            <ImageView
+                style="@style/Menu.ItemIcon"
+                android:layout_below="@id/last_name"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/ic_camera" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_picture"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_below="@id/last_name"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/face_default_grey" />
+
+            <Button
+                android:id="@+id/change_picture"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/last_name"
+                android:layout_marginTop="35dp"
+                android:hint="@string/change"
+                android:padding="15dp" />
+
+
+            <ImageView
+                style="@style/Menu.ItemIcon"
+                android:layout_below="@id/profile_picture"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/ic_phone" />
+
+            <EditText
+                android:id="@+id/phone_number"
+                style="@style/UserProfile.EditText"
+                android:layout_below="@id/profile_picture"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@string/roboto_regular"
+                android:hint="@string/phone_number"
+                android:inputType="number"
+                android:maxLength="13" />
+
+
+            <ImageView
+                style="@style/Menu.ItemIcon"
+                android:layout_below="@id/phone_number"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_city" />
+
+            <TextView
+                android:id="@+id/region"
+                style="@style/UserProfile.EditText"
+                android:layout_below="@id/phone_number"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@string/roboto_regular"
+                android:hint="@string/region"
+                android:inputType="text" />
+
+            <ImageView
+                style="@style/FilterMenu.DropdownArrow"
+                android:layout_below="@id/phone_number"
+                android:layout_marginTop="50dp" />
+
+            <ImageView
+                style="@style/Menu.ItemIcon"
+                android:layout_below="@id/region"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="32dp" />
+
+            <TextView
+                android:id="@+id/area"
+                style="@style/UserProfile.EditText"
+                android:layout_below="@id/region"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@string/roboto_regular"
+                android:hint="@string/area"
+                android:inputType="text" />
+
+            <ImageView
+                style="@style/FilterMenu.DropdownArrow"
+                android:layout_below="@id/region"
+                android:layout_marginTop="50dp" />
+
+            <ImageView
+                style="@style/Menu.ItemIcon"
+                android:layout_below="@id/area"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_gender" />
+
+            <Spinner
+                android:id="@+id/genderspinner"
+                style="@style/UserProfile.EditText"
+                android:layout_below="@id/area"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/edit_text_user_profile"
+                android:hint="@string/select_gender"
+                android:prompt="@string/select_gender" />
+
+            <ImageView
+                style="@style/FilterMenu.DropdownArrow"
+                android:layout_below="@id/area"
+                android:layout_marginTop="50dp" />
+
+            <ImageView
+                style="@style/Menu.ItemIcon"
+                android:layout_below="@id/genderspinner"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/ic_cake" />
+
+            <TextView
+                android:id="@+id/birthmonth"
+                style="@style/UserProfile.EditText"
+                android:layout_below="@id/genderspinner"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@string/roboto_regular"
+                android:hint="@string/birthday"
+                android:inputType="date"
+                android:onClick="setDate" />
+
+            <ImageView
+                style="@style/FilterMenu.DropdownArrow"
+                android:layout_below="@id/genderspinner"
+                android:layout_marginTop="50dp" />
+
+            <ProgressBar
+                android:id="@+id/pb_loading"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

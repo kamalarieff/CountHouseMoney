@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/appAlertMessageLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/alert_color_bg"
+    android:gravity="center_vertical"
+    android:minHeight="63dip"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/padding_left_window">
+
+    <ImageView
+        android:id="@+id/chatImage"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/default_no_image" />
+
+    <TextView
+        android:id="@+id/senderName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/chatImage"
+        android:maxLines="2"
+        android:text="@string/chat_notification_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/scm_text_medium" />
+
+    <TextView
+        android:id="@+id/chatMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/senderName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_toRightOf="@+id/chatImage"
+        android:maxLines="1"
+        android:text="@string/common_text_wait"
+        android:textColor="@color/white"
+        android:textSize="@dimen/scm_text_smaller"
+        android:ellipsize="end"/>
+
+    <TextView
+        android:id="@android:id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@android:id/message"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/senderName"
+        android:maxLines="1"
+        android:text="@string/common_text_wait"
+        android:textColor="@color/white"
+        android:textSize="@dimen/scm_text_smaller"
+        android:visibility="gone" />
+
+</RelativeLayout>

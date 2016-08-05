@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_list_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_background">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/action_bar_floating_list"
+            layout="@layout/actionbar_floating" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="android.support.design.widget.AppBarLayout$ScrollingViewBehavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="vertical" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floating_action_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@drawable/fab_sell"
+        app:backgroundTint="@color/red"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:layout_behavior="com.mudah.my.behaviors.ScrollingFABBehavior" />
+
+    <include
+        android:id="@+id/loading_footer"
+        layout="@layout/loading_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom" />
+
+    <TextView
+        android:id="@+id/skip_tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@color/chat_msg_box_bg"
+        android:elevation="15dp"
+        android:gravity="center"
+        android:text="@string/skip_tutorial"
+        android:textColor="@color/text_dark_blue"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_sticky_banner"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:layout_gravity="end|bottom"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone"-->
+    <!--tools:background="@color/placeholder_grey"-->
+    <!--tools:layout_height="50dp"-->
+    <!--tools:visibility="visible" />-->
+
+</android.support.design.widget.CoordinatorLayout>

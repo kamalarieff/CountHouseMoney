@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/grid_item_bg_light"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grid_placeholder_bg_color"
+        tools:layout_height="95dp">
+
+        <ImageView
+            android:id="@+id/imv_grid"
+            style="@style/list_ads_item_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/placeholder" />
+
+        <TextView
+            android:id="@+id/tv_image_count"
+            style="@style/grid_ads_item_pic_number"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="bottom|end"
+            android:paddingEnd="1.5dp"
+            android:paddingRight="1.5dp"
+            tools:text="10" />
+
+        <ImageView
+            android:id="@+id/imv_favourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:background="@null"
+            android:paddingBottom="8dp"
+            android:paddingEnd="2dp"
+            android:paddingRight="2dp"
+            android:src="@drawable/ic_action_heart_grid" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_subject"
+        style="@style/adsGridView.subject"
+        android:fontFamily="@string/roboto_light"
+        tools:text="@string/placeholder" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        style="@style/adsGridView.price"
+        android:fontFamily="@string/roboto_regular" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="6dp"
+        android:paddingTop="4dp">
+
+        <TextView
+            android:id="@+id/tv_posted"
+            style="@style/adsGridView.posted"
+            android:layout_gravity="left"
+            android:fontFamily="@string/roboto_light"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/iv_company_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+            android:paddingRight="5dp"
+            android:src="@drawable/icon_private_ad" />
+    </FrameLayout>
+
+</LinearLayout>

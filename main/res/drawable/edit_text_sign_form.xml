@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item app:state_error="true">
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item
+                android:bottom="1dp"
+                android:left="-3dp"
+                android:right="-3dp"
+                android:top="-3dp">
+
+                <shape xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:padding="10dp"
+                    android:shape="rectangle">
+                    <solid android:color="@color/white" />
+                    <corners android:radius="0dp" />
+                    <stroke
+                        android:width="4px"
+                        android:color="@color/red" />
+                </shape>
+
+            </item>
+        </layer-list>
+    </item>
+<item app:state_error="false" android:state_focused="true">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="1dp"
+        android:left="-3dp"
+        android:right="-3dp"
+        android:top="-3dp">
+
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:padding="10dp"
+        android:shape="rectangle">
+        <solid android:color="@color/white" />
+        <corners android:radius="0dp" />
+        <stroke
+            android:width="4px"
+            android:color="@color/sign_form_focus_text" />
+        </shape>
+
+    </item>
+</layer-list>
+</item>
+
+    <item>
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item
+                android:bottom="1dp"
+                android:left="-3dp"
+                android:right="-3dp"
+                android:top="-3dp">
+
+                <shape xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:padding="10dp"
+                    android:shape="rectangle">
+                    <solid android:color="@color/white" />
+                    <corners android:radius="0dp" />
+                    <stroke
+                        android:width="4px"
+                        android:color="@color/sign_form_hint" />
+                </shape>
+
+            </item>
+        </layer-list>
+    </item>
+    </selector>
