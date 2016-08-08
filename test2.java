@@ -1,4 +1,4 @@
 public static void main(String[] args) {
-	// test.java
+	// test2.java
 	printf("Hello World!");
 }
